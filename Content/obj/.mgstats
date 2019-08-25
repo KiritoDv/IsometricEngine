@@ -1,0 +1,8 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/../../assets/SmallStone.png","/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/bin/sprites/SmallStone.xnb","TextureProcessor","Texture2DContent",382,4181,0.11239
+"/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/sprites/Dirt.png","/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/bin/sprites/Dirt.xnb","TextureProcessor","Texture2DContent",384,4181,0.001348
+"/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/sprites/G2M.png","/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/bin/sprites/G2M.xnb","TextureProcessor","Texture2DContent",282,1309,0.002327
+"/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/sprites/Grass.png","/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/bin/sprites/Grass.xnb","TextureProcessor","Texture2DContent",427,4181,0.001066
+"/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/sprites/Grass3.png","/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/bin/sprites/Grass3.xnb","TextureProcessor","Texture2DContent",522,4821,0.002861
+"/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/sprites/GrassRGB.png","/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/bin/sprites/GrassRGB.xnb","TextureProcessor","Texture2DContent",391,4181,0.00199
+"/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/sprites/Stone.png","/home/kiritodev/Documents/proyects/monogame/IsometricEngine/Content/bin/sprites/Stone.xnb","TextureProcessor","Texture2DContent",354,4181,0.004201
