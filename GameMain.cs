@@ -34,10 +34,14 @@ namespace IsometricEngine
             this.p = new Player();
 
             for(int i = 0; i < 10; i++){
-                for(int j = 0; j < 10; j++){
-                    for(int k = 0; k < 10; k++){
-                        this.map.setTile(i, j, k, new Grass());   
-                    }
+                for(int k = 0; k < 10; k++){
+                    this.map.setTile(i, 1, k, new Stone());   
+                }
+            }
+
+            for(int i = 0; i < 10; i++){
+                for(int k = 0; k < 10; k++){
+                    this.map.setTile(i, 2, k, new Grass());
                 }
             }
             
@@ -52,8 +56,8 @@ namespace IsometricEngine
             this.textures.Add("Grass3", Content.Load<Texture2D>("sprites/Grass3"));
             this.textures.Add("G2M", Content.Load<Texture2D>("sprites/G2M"));
             this.textures.Add("SmallStone", Content.Load<Texture2D>("sprites/SmallStone"));
-            this.textures.Add("Stone", Content.Load<Texture2D>("sprites/Dirt"));
-            this.textures.Add("Dirt", Content.Load<Texture2D>("sprites/Stone"));            
+            this.textures.Add("Stone", Content.Load<Texture2D>("sprites/Stone"));
+            this.textures.Add("Dirt", Content.Load<Texture2D>("sprites/Dirt"));            
         }
 
         protected override void Update(GameTime gameTime){
@@ -86,14 +90,14 @@ namespace IsometricEngine
 
 
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, null, null, null, cam.get_transformation(GraphicsDevice));
-            for(int y = this.map.points.GetLength(1)-1; y > 0; y--){
+            for(int y = 0; y < this.map.points.GetLength(1); y++){
                 for(int x = 0; x < this.map.points.GetLength(0); x++){
                     for(int z = 0; z < this.map.points.GetLength(2); z++){
                         if(this.map.points[x, y, z] != null){
                             ITile tile = this.map.points[x, y, z];
                             int baseX = this.map.points.GetLength(0)*8;
                             int baseY = this.map.points.GetLength(1)/2;
-                            spriteBatch.Draw(this.textures[tile.tileTexture], new Rectangle(baseX+((x-z)*(32/2)), baseY+(((x+z)*(32/4))+((32/2)*(y))), tile.width, tile.height), null, Color.White, 0, Vector2.Zero, SpriteEffects.None, y/((float)this.map.points.GetLength(1)));
+                            spriteBatch.Draw(this.textures[tile.tileTexture], new Rectangle(baseX+((x-z)*(32/2)), baseY+(((x+z)*(32/4))-((32/2)*(y))), tile.width, tile.height), null, Color.White, 0, Vector2.Zero, SpriteEffects.None, y/((float)this.map.points.GetLength(1)));
                         }
                     }   
                 }
